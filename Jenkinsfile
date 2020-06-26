@@ -19,8 +19,13 @@ node{
    stage ("build another job") {		
          
                 build 'delivery_line_1'	
+      
             
         }
+   stage ('cucumber report')
+   {
+      cucumber failedFeaturesNumber: 0, failedScenariosNumber: 0, failedStepsNumber: 0, fileIncludePattern: '**/*.json', pendingStepsNumber: 0, skippedStepsNumber: 0, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: 0
+   }
   
 }
    
