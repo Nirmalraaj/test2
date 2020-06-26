@@ -17,9 +17,9 @@ node{
     
     }
    stage ("build another job") {		
-            steps {
+         
                 build 'delivery_line_1'	
-            }
+            
         }
   
 }
