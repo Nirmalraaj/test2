@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!-- interesting -->
 	<groupId>com.mcnz.rps</groupId>
-	<artifactId>bhavani</artifactId>
+	<artifactId>project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>bhavani</name>
+	<name>project</name>
 
 
 	<dependencies>
@@ -19,7 +19,7 @@
 	</dependencies>
 	
 	<build>
-    <finalName>bhavani</finalName>
+    <finalName>project</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
