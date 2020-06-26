@@ -1,7 +1,7 @@
 node{
    
    stage('SCM Checkout'){
-     git 'https://github.com/bhavanimahalingam/testjob'
+     git 'https://github.com/Nirmalraaj/test2'
    }
    stage('Compile-Package'){
       // Get maven home path
@@ -11,15 +11,17 @@ node{
     }
    }
    stage('Deploy to Tomcat'){
-      sshagent(['jenkins_cat']){
-      sh 'scp -o StrictHostKeyChecking=no target/*.war  ec2-user@35.153.50.127:/home/ec2-user/tomcat7/webapps/'
-      }
-  }
-    stage('Email Notification'){
-      mail bcc: '', body: '''Hi Welcome to jenkins email alerts
-      Thanks
-      bhavani''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'bavani15799@gmail.com'
-   }
+    sshagent(['jenkins_tom']) {
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline_test2/target/*.war  ec2-user@54.157.178.149:/home/ec2-user/tomcat7/webapps/'
+     }
+    
+    }
+     stage('email notifictaion'){
+			steps {
+				mail bcc: '', body: 'Hi error has occured', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline', to: 'nirmal11.12.1998@gmail.com'
+	
+			}
+		}
 }
    
  
