@@ -16,12 +16,7 @@ node{
      }
     
     }
-     stage('email notifictaion'){
-			steps {
-				mail bcc: '', body: 'Hi error has occured', cc: '', from: '', replyTo: '', subject: 'Jenkins Pipeline', to: 'nirmal11.12.1998@gmail.com'
-	
-			}
-		}
+  
 }
    
  
